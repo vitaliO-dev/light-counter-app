@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="details" *ngIf="lightService.selectedLight; else noLight">
+    <div class="button">
+      <button (click)="lightService.removeLight()">Remove light</button>
+    </div>
+    <div class="main-info">
+      <div class="name">Name: {{lightService.selectedLight.name}}</div>
+      <div>Color: <span [ngClass]="lightService.selectedLight.color + '-color'">{{lightService.selectedLight.color}}</span></div>
+    </div>
+    <div>
+      <span>Change color</span>
+      <div class="select-colors">
+        <div *ngIf="lightService.selectedLight.color !== 'red'" class="circle red-circle" (click)="selectColor(LIGHT_COLOR.RED)"></div>
+        <div *ngIf="lightService.selectedLight.color !== 'green'" class="circle green-circle" (click)="selectColor(LIGHT_COLOR.GREEN)"></div>
+        <div *ngIf="lightService.selectedLight.color !== 'orange'" class="circle orange-circle" (click)="selectColor(LIGHT_COLOR.ORANGE)"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noLight>
+  <div class="no-lights">No light configured</div>
+</ng-template>

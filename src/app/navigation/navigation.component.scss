@@ -1,0 +1,22 @@
+.navigation {
+  background: #A9A7A9;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  padding: 10px;
+}
+
+.button {
+  margin-bottom: 30px;
+}
+
+.light {
+  cursor: pointer;
+  padding: 5px 0 30px;
+
+  &.selectedLight {
+    background: #808080;
+  }
+}

@@ -1,0 +1,58 @@
+
+@import 'src/assets/colors';
+
+.container {
+  height: 100%;
+  background: #D2D2D2;
+}
+
+.details {
+  padding: 30px;
+  background: #D2D2D2;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+}
+
+.select-colors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  align-self: flex-end;
+}
+
+.circle {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+
+  &.red-circle {
+    background-color: $red;
+  }
+
+  &.green-circle {
+    background-color: $green;
+  }
+
+  &.orange-circle {
+    background-color: $orange;
+  }
+}
+
+.main-info {
+  margin: 20px 0;
+
+  .name {
+    text-align: center;
+  }
+}
+
+.no-lights {
+  padding-top: 50px;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+<section class="navigation">
+  <div class="content">
+    <button class="button" (click)="addLight()">add light</button>
+    <div>
+      <div class="light"
+           *ngFor="let light of lightService.lights; let i = index" (click)="lightService.selectLight(i)"
+           [ngClass]="{'selectedLight': lightService.selectedLight?.name === light.name}">
+        {{light.name}} <span [ngClass]="light.color + '-color'">{{light.color}}</span>
+      </div>
+    </div>
+  </div>
+</section>
